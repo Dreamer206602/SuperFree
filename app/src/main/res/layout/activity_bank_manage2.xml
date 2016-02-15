@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.BankManage2Activity">
+    <include
+        android:id="@id/topBar"
+        layout="@layout/item_topbar"
+        />
+    <RelativeLayout
+        android:id="@+id/relative_bank"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="50px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            app:sizeToFit="true"
+            app:minTextSize="12sp"
+            android:textSize="15sp"
+            android:id="@+id/tv_bankname"
+            android:textColor="@color/black"
+            android:text="民生银行"
+            android:padding="40px"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            app:sizeToFit="true"
+            app:minTextSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6222021703007872813"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="40px"
+            android:id="@+id/tvBankNumber"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="39dp"
+            android:singleLine="true"
+            android:layout_marginEnd="39dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

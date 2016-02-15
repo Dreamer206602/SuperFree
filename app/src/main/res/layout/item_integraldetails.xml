@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+        <ImageView
+            android:id="@+id/id_image"
+            android:src="@mipmap/ic_default_adimage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="300px"/>
+
+        <!-- 兑换-->
+        <TextView
+            android:id="@+id/tv_exchange"
+            android:text="兑换:"
+            android:textSize="50px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:layout_below="@id/id_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--j所需要的积分数目 999 -->
+        <TextView
+            android:id="@+id/tv_num_product_integral"
+            android:text="999"
+            android:textSize="55px"
+            android:gravity="center"
+            android:textColor="@color/def_text_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_exchange"
+            android:layout_toRightOf="@+id/tv_exchange"
+            android:layout_toEndOf="@+id/tv_exchange"/>
+
+
+        <!-- 积分-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分"
+            android:textSize="40px"
+            android:layout_marginLeft="5px"
+            android:id="@+id/tv_integral"
+            android:layout_alignBottom="@+id/tv_exchange"
+            android:layout_toRightOf="@+id/tv_num_product_integral"
+            android:layout_toEndOf="@+id/tv_num_product_integral"/>
+
+        <!-- +-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/tv_plus"
+            android:textSize="40px"
+            android:layout_alignBottom="@+id/tv_integral"
+            android:layout_toRightOf="@+id/tv_integral"
+            android:layout_toEndOf="@+id/tv_integral"/>
+
+        <!-- 400元-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="400"
+            android:id="@+id/tv_num_product_price"
+            android:textSize="45px"
+            android:layout_alignBottom="@+id/tv_num_product_integral"
+            android:layout_toRightOf="@+id/tv_plus"
+            android:layout_toEndOf="@+id/tv_plus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="40px"
+            android:id="@+id/textView14"
+            android:layout_alignBottom="@+id/tv_num_product_price"
+            android:layout_toRightOf="@+id/tv_num_product_price"
+            android:layout_toEndOf="@+id/tv_num_product_price"/>
+
+        <!-- 库存-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{库存: 28}"
+            android:textSize="40px"
+            android:id="@+id/tv_inventory"
+            android:layout_alignBottom="@+id/textView14"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="27dp"
+            android:layout_marginEnd="27dp"/>
+    <View
+        android:id="@+id/view4"
+        android:layout_below="@id/tv_inventory"
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:background="@color/def_product_textView_background_color"
+        />
+
+        <!--&lt;!&ndash; 商品详情&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_goods_title"-->
+            <!--android:text="商品详情"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="50px"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/view4"-->
+            <!--android:layout_toLeftOf="@+id/tv_integral"-->
+            <!--android:layout_toStartOf="@+id/tv_integral"/>-->
+        <!--<View-->
+            <!--android:layout_below="@id/tv_goods_title"-->
+            <!--android:id="@+id/view1"-->
+            <!--android:layout_marginTop="5px"-->
+            <!--android:layout_marginLeft="20px"-->
+            <!--android:layout_marginRight="20px"-->
+            <!--android:background="@color/black"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2px"-->
+            <!--/>-->
+
+        <!--&lt;!&ndash; 商品详情信息&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_project_details"-->
+            <!--android:text="商品简介和参数等等是大叔大叔"-->
+            <!--android:textSize="30px"-->
+            <!--android:layout_marginTop="10px"-->
+            <!--android:maxLines="3"-->
+            <!--android:ellipsize="end"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="100px"-->
+            <!--android:layout_alignTop="@+id/view1"-->
+            <!--android:layout_alignLeft="@+id/view1"-->
+            <!--android:layout_alignStart="@+id/view1"-->
+            <!--android:layout_alignRight="@+id/view1"-->
+            <!--android:layout_alignEnd="@+id/view1"/>-->
+
+        <!--&lt;!&ndash; 兑换说明&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="50px"-->
+            <!--android:text="兑换说明"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:id="@+id/tv_exchange_note"-->
+            <!--android:layout_below="@+id/tv_project_details"-->
+            <!--android:layout_alignLeft="@+id/tv_project_details"-->
+            <!--android:layout_alignStart="@+id/tv_project_details"/>-->
+
+        <!--<View-->
+            <!--android:id="@+id/view2"-->
+            <!--android:background="@color/black"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2px"-->
+            <!--android:layout_marginTop="5px"-->
+            <!--android:layout_below="@+id/tv_exchange_note"-->
+            <!--android:layout_alignLeft="@+id/tv_exchange_note"-->
+            <!--android:layout_alignStart="@+id/tv_exchange_note"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="100px"-->
+            <!--android:layout_marginTop="10px"-->
+            <!--android:text="点击'立即兑换'，填写收货地址"-->
+            <!--android:id="@+id/textView15"-->
+            <!--android:layout_below="@+id/view2"-->
+            <!--android:layout_alignLeft="@+id/view2"-->
+            <!--android:layout_alignStart="@+id/view2"-->
+            <!--android:layout_alignRight="@+id/tv_project_details"-->
+            <!--android:layout_alignEnd="@+id/tv_project_details"/>-->
+
+        <!--&lt;!&ndash; 注意事项&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="注意事项"-->
+            <!--android:textSize="50px"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:id="@+id/textView16"-->
+            <!--android:layout_below="@+id/textView15"-->
+            <!--android:layout_alignLeft="@+id/textView15"-->
+            <!--android:layout_alignStart="@+id/textView15"/>-->
+
+        <!--<View-->
+            <!--android:id="@+id/view3"-->
+            <!--android:background="@color/black"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2px"-->
+            <!--android:layout_below="@+id/textView16"-->
+            <!--android:layout_alignLeft="@+id/textView16"-->
+            <!--android:layout_alignStart="@+id/textView16"/>-->
+
+        <!--&lt;!&ndash; 注意事项一&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10px"-->
+            <!--android:text="1.部分偏远地区到货时间可能较晚，请耐心等待"-->
+            <!--android:id="@+id/textView17"-->
+            <!--android:layout_below="@+id/view3"-->
+            <!--android:layout_alignLeft="@+id/view3"-->
+            <!--android:layout_alignStart="@+id/view3"/>-->
+
+        <!--&lt;!&ndash; 注意事项二&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5px"-->
+            <!--android:layout_marginBottom="50px"-->
+            <!--android:text="2.商品一经兑换，除商品质量问题外，一律不退还积分。"-->
+            <!--android:id="@+id/textView18"-->
+            <!--android:layout_below="@+id/textView17"-->
+            <!--android:layout_alignLeft="@+id/textView17"-->
+            <!--android:layout_alignStart="@+id/textView17"/>-->
+
+
+    <!--<RoundImageView-->
+        <!--android:id="@+id/tv_click_exchange"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80px"-->
+        <!--android:background="@mipmap/exchange"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_margin="20px"-->
+        <!--/>-->
+
+
+
+
+
+</RelativeLayout>

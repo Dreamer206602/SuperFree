@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/id_image"
+            android:layout_width="350px"
+            android:layout_height="200px"
+            android:scaleType="fitXY"
+            android:layout_margin="10px"
+            android:background="@mipmap/ic_default_adimage"/>
+    </RelativeLayout>
+
+        <!-- 商品名称-->
+        <TextView
+            android:text="商品名称"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_goods_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="20px"
+            android:padding="10px"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/relative_img"
+            android:layout_toEndOf="@+id/relative_img"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:layout_marginLeft="30px"
+        android:padding="15px"
+        android:layout_below="@+id/tv_goods_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout"
+        android:layout_toRightOf="@+id/relative_img"
+        android:layout_toEndOf="@+id/relative_img">
+        <TextView
+        android:text="600"
+        android:textSize="15sp"
+        android:textColor="@color/def_text_color"
+        android:id="@+id/tv_num_product_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="积分"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/textView11"
+            />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/textView12"
+            />
+
+        <!-- 400元-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="400元"
+        android:textColor="@color/black"
+        android:id="@+id/tv_num_product_price"
+            />
+    </LinearLayout>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        app:sizeToFit="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请于10分钟之内付款"
+        android:id="@+id/textView15"
+        android:textColor="@color/def_pointer_color"
+        android:padding="10px"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"/>
+
+
+</RelativeLayout>

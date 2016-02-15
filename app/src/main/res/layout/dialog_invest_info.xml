@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:text="提示"
+        android:layout_marginTop="20px"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值成功，快去投资赚钱吧"
+        android:textColor="@color/black"
+        android:id="@+id/tv_invest_result"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/tv_info"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+       android:id="@+id/view1"
+       android:layout_below="@id/tv_invest_result"
+        android:layout_width="match_parent"
+       android:layout_marginTop="30px"
+        android:layout_height="3px"/>
+
+    <TextView
+        android:id="@+id/tv_click"
+        android:text="确定"
+        android:textColor="@color/def_pointer_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="40px"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

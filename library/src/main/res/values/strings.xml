@@ -1,0 +1,6 @@
+<resources>
+
+    <string name="j_pickerview_cancel">取消</string>
+    <string name="j_pickerview_submit">确定</string>
+    <string name="app_name">superFree</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.BankCardManageActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"
+        />
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/tv_notice"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="20px"
+        android:text="为了保证您的支付便捷交易安全请绑定一张常用卡设为银行卡，用作支付唯一通道"
+        style="@style/match_wrap"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:maxLines="2"
+        app:minTextSize="12sp"
+        android:padding="5px"
+        android:layout_marginLeft="2px"
+        android:layout_marginRight="2px"
+        app:sizeToFit="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/relative_add_bank"
+        android:layout_below="@id/tv_notice"
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_add_bank"
+            android:padding="20px"
+            android:text="添加银行卡"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/plus"
+            android:drawablePadding="10px"
+            android:layout_marginLeft="20px"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

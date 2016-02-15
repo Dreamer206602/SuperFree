@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">SuperFree</string>
+    <!-- MainActivity中的四个RadioButton-->
+    <string name="home">首页</string>
+    <string name="manageMoney">理财</string>
+    <string name="integralMarket">积分超市</string>
+    <string name="mine">个人</string>
+
+    <!-- XListView-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- 这是个人页面中的所需要的标题和图片资源ID-->
+    <string-array name="item_mine_title">
+        <item>投资记录</item>
+        <item>交易明细</item>
+        <item>我的积分</item>
+        <!--<item>站内情</item>-->
+        <!--<item>邀请好友</item>-->
+        <!--<item>签到</item>-->
+        <item>用户设置</item>
+        <item>更多</item>
+    </string-array>
+   <array name="item_mine_imageID">
+       <item>@mipmap/investmentrecord</item>
+       <item>@mipmap/transactiondetail</item>
+       <item>@mipmap/mypoints</item>
+       <item>@mipmap/station</item>
+       <item>@mipmap/invitefriends</item>
+       <item>@mipmap/sign</item>
+       <item>@mipmap/accountsettings</item>
+       <item>@mipmap/more</item>
+   </array>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="msg_error_phone">请输入正确的手机号码</string>
+    <string name="msg_error_password">请输入6到16位数字加字母密码</string>
+    <string name="msg_not_same_password">密码不一致</string>
+    <string name="msg_get_verify_code">重新获取(59s)</string>
+    <string name="msg_error_username">请输入正确的用户名</string>
+    <string name="msg_error_verifyCode">请输入正确的验证码</string>
+    <string name="msg_error_userIDCard">请输入正确的身份证号码</string>
+    <string name="msg_error_bankname">请输入正确的银行卡名</string>
+    <string name="msg_error_banknum">请输入正确的银行卡号</string>
+    <string name="msg_error_pay_password">请输入正确的支付密码</string>
+    <string name="msg_error_invest_money">请投资相关产品的整数倍</string>
+
+
+    <string name="listfooterview_normal">查看更多</string>
+    <string name="listfooterview_ready">松开载入更多</string>
+
+</resources>

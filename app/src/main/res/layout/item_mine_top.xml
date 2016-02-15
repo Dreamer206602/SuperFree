@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/def_pointer_color">
+            <!-- 用户的手机号码-->
+            <TextView
+                android:id="@+id/tv_person_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:text="132****3997"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <!-- 用户的头像-->
+            <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+                android:id="@+id/tv_person_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_person_phone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10px"
+                android:background="@mipmap/user"
+                app:type="circle"/>
+
+            <!-- 可用余额-->
+            <TextView
+                android:id="@+id/tv_available_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_person_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10px"
+                android:text="可用余额(元)"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <!-- 余额数目-->
+            <TextView
+                android:id="@+id/tv_num_available_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tv_person_phone"
+                android:layout_alignLeft="@+id/tv_available_balance"
+                android:layout_alignRight="@+id/tv_person_phone"
+                android:layout_alignStart="@+id/tv_available_balance"
+                android:layout_below="@+id/tv_available_balance"
+                android:layout_marginTop="10px"
+                android:singleLine="true"
+                android:text="0.00"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+
+            <!-- 现有资产-->
+            <TextView
+                android:id="@+id/tv_num_own_RMB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_num_available_balance"
+                android:layout_marginLeft="47dp"
+                android:layout_marginStart="47dp"
+                android:singleLine="true"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <!-- 现有资产-->
+            <TextView
+                android:id="@+id/tv_own_RMB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_num_own_RMB"
+                android:layout_alignStart="@+id/tv_num_own_RMB"
+                android:layout_below="@+id/tv_num_own_RMB"
+                android:layout_marginLeft="-10px"
+                android:text="现有资产"
+                android:textColor="@color/white"
+                android:layout_marginBottom="20px"
+                android:textSize="15sp"/>
+
+            <!-- 已收利息的数目-->
+            <TextView
+                android:id="@+id/tv_num_received_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_num_own_RMB"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <!--已收利息 -->
+            <TextView
+                android:id="@+id/tv_received_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_person_image"
+                android:layout_alignStart="@+id/tv_person_image"
+                android:layout_alignTop="@+id/tv_own_RMB"
+                android:layout_centerHorizontal="true"
+                android:text="已收利息"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <!-- 代收利息的数目-->
+            <TextView
+                android:id="@+id/tv_num_waiting_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_num_received_interest"
+                android:layout_marginRight="60dp"
+                android:singleLine="true"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <!-- 代收利息-->
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_num_waiting_interest"
+                android:layout_alignStart="@+id/tv_num_waiting_interest"
+                android:layout_alignTop="@+id/tv_received_interest"
+                android:layout_marginLeft="-10px"
+                android:text="待收利息"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_product_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:background="@color/white">
+
+            <!--充值按钮-->
+            <TextView
+                android:id="@+id/tv_click_recharge"
+                android:layout_width="100px"
+                android:layout_height="90px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="39dp"
+                android:layout_marginStart="39dp"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/def_pointer_color"
+                android:textSize="40px"/>
+
+            <!-- 提现-->
+            <TextView
+                android:id="@+id/tv_click_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:gravity="center_horizontal"
+                android:text="提现"
+                android:textColor="@color/def_pointer_color"
+                android:textSize="40px"/>
+        </RelativeLayout>
+
+        <!--
+    android:numColumns="auto_fit" ，GridView的列数设置为自动
+    android:columnWidth="90dp"，每列的宽度，也就是Item的宽度
+    android:stretchMode="columnWidth"，缩放与列宽大小同步
+    android:verticalSpacing="10dp"，两行之间的边距，如：行一(NO.0~NO.2)与行二(NO.3~NO.5)间距为10dp
+    android:horizontalSpacing="10dp"，两列之间的边距
+     -->
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="40px"
+            android:columnWidth="100dp"
+            android:gravity="center_vertical"
+            android:horizontalSpacing="10px"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:smoothScrollbar="true"
+            android:soundEffectsEnabled="true"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10px"/>
+
+
+
+</LinearLayout>

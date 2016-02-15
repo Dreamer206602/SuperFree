@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.ManagePayActivity">
+
+
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"
+        />
+    <!-- 旧的支付密码-->
+    <RelativeLayout
+        android:id="@+id/relative_old_pay_password"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="40px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_old_pay_password"
+            android:drawableLeft="@mipmap/icon_input_password"
+            android:hint="请输入您旧的支付密码"
+            android:background="@null"
+            android:drawablePadding="20px"
+            android:padding="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <!--新的支付密码-->
+    <RelativeLayout
+        android:id="@+id/relative_new_pay_password"
+        android:layout_below="@id/relative_old_pay_password"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_new_pay_password"
+            android:drawableLeft="@mipmap/icon_input_password"
+            android:hint="请输入您新的支付密码"
+            android:background="@null"
+            android:drawablePadding="20px"
+            android:padding="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <!--确认新的支付密码-->
+    <RelativeLayout
+        android:id="@+id/relative_confirm_new_login_password"
+        android:layout_below="@id/relative_new_pay_password"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_confirm_new_pay_password"
+            android:drawableLeft="@mipmap/icon_input_password"
+            android:hint="请再次输入您的支付密码"
+            android:background="@null"
+            android:drawablePadding="20px"
+            android:padding="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+    <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        app:type="round"
+        app:borderRadius="50px"
+        android:background="@mipmap/modifypaypassword"
+        android:id="@+id/tv_click_modify_pay_password"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/relative_confirm_new_login_password"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

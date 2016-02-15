@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+        <FrameLayout
+            android:id="@+id/main_Container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="11"/>
+
+        <RadioGroup
+            android:paddingTop="10dp"
+            android:id="@+id/main_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- 首页-->
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/home"
+                android:textColor="@drawable/selector_text_color"
+                android:drawableTop="@drawable/selector_home"
+                android:text="@string/home"
+                style="@style/main_radioButton"
+                 />
+            <!-- 产品-->
+            <RadioButton
+                android:id="@+id/product"
+                android:textColor="@drawable/selector_text_color"
+                android:drawableTop="@drawable/selector_product"
+                android:text="@string/manageMoney"
+                style="@style/main_radioButton"
+                />
+
+            <!-- 积分商城-->
+            <RadioButton
+                android:id="@+id/integralMarket"
+                android:textColor="@drawable/selector_text_color"
+                android:drawableTop="@drawable/selector_market"
+                android:text="@string/integralMarket"
+                style="@style/main_radioButton"
+                 />
+
+            <!-- 个人账户-->
+            <RadioButton
+                android:id="@+id/mine"
+                android:textColor="@drawable/selector_text_color"
+                android:drawableTop="@drawable/selector_person"
+                android:text="@string/mine"
+                style="@style/main_radioButton"
+                 />
+
+        </RadioGroup>
+    </LinearLayout>
+
+

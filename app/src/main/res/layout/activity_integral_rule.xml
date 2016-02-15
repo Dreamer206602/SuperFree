@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.IntegralRuleActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+    <ImageView
+        android:id="@+id/img_Integral_rule"
+        android:layout_below="@id/topBar"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/integralrule"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="30px"
+        android:background="@color/white"
+        android:layout_below="@id/img_Integral_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:visibility="gone"
+            android:id="@+id/tv_common_problem"
+            android:padding="20px"
+            android:layout_margin="20px"
+            android:text="常见问题"
+            app:minTextSize="50sp"
+            android:textSize="30sp"
+            app:sizeToFit="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/commonproblem"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

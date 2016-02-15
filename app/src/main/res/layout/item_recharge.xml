@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- 用户的提醒-->
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/tv_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        app:sizeToFit="true"
+        app:minTextSize="12sp"
+        android:text="您充值的资金若未投资就提现，第三方支付公司会收取您提现金额中未投资的0.5%作为手续费用"
+        android:textColor="@color/red"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:textSize="12sp"/>
+
+    <!-- 银行账户-->
+    <RelativeLayout
+        android:id="@+id/relative_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_warn"
+        android:layout_marginTop="20px"
+        android:background="@color/white">
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定卡号"
+            android:padding="20px"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/tv_num_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_max_RMB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_product_name"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="30px"
+        android:text="本次最多可充值"
+        />
+
+    <TextView
+        android:id="@+id/tv_num_max_RMB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_max_RMB"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        android:layout_toEndOf="@+id/tv_max_RMB"
+        android:layout_toRightOf="@+id/tv_max_RMB"
+        android:text="50000"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/tv_num_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_num_max_RMB"
+        android:layout_toEndOf="@+id/tv_num_max_RMB"
+        android:layout_toRightOf="@+id/tv_num_max_RMB"
+        android:text="元"
+        />
+
+    <TextView
+        android:id="@+id/tv_Quota_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/explain"
+        android:drawablePadding="8px"
+        android:text="限额说明"
+        android:layout_marginRight="10px"
+        android:textColor="@color/def_pointer_color"
+        android:layout_above="@+id/relative_recharge"
+        android:layout_alignRight="@+id/tv_warn"
+        android:layout_alignEnd="@+id/tv_warn"/>
+
+    <!-- 充值-->
+    <RelativeLayout
+        android:id="@+id/relative_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_max_RMB"
+        android:layout_marginTop="30px"
+        android:background="@color/white"
+        >
+
+        <!-- 请输入充值金额-->
+        <TextView
+            android:id="@+id/tv_recharge_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值金额"
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="30px"
+            />
+
+        <EditText
+        android:id="@+id/tv_num_recharge_RMB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入充值金额"
+        android:inputType="numberDecimal"
+        android:background="@null"
+        android:padding="30px"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_recharge_num"
+        android:layout_toEndOf="@+id/tv_recharge_num"/>
+    </RelativeLayout>
+
+
+
+    <!-- 验证码-->
+    <RelativeLayout
+        android:id="@+id/relative_identifying_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/relative_recharge"
+        android:layout_marginTop="30px"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_identifying_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+
+        <!-- 请输入验证码 -->
+        <EditText
+            android:id="@+id/et_identifying_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:padding="30px"
+            android:layout_toRightOf="@+id/tv_identifying_code"
+            android:layout_toEndOf="@+id/tv_identifying_code"
+            />
+        <com.zchx.lb.superfree.ui.ui.widget.TimeButton
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击获取验证码"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/tv_get_identify_code"
+            android:textColor="@color/black"
+            android:padding="30px"
+            android:layout_marginLeft="10px"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/et_identifying_code"
+            android:layout_toEndOf="@+id/et_identifying_code"/>
+
+
+    </RelativeLayout>
+
+    <!-- 最下面的布局-->
+    <RelativeLayout
+        android:id="@+id/relative_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_identifying_code"
+        android:layout_marginTop="20px">
+
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/checkBox"
+            android:layout_toEndOf="@+id/checkBox"
+            android:layout_toRightOf="@+id/checkBox"
+            android:text="我同意"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="90px"
+            android:layout_marginTop="30px"
+            android:checked="true"/>
+
+        <!-- 移动支付协议-->
+        <TextView
+            android:id="@+id/tv_Payment_Agreement"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView22"
+            android:layout_toEndOf="@+id/textView22"
+            android:layout_toRightOf="@+id/textView22"
+            android:text="&lt;&lt;移动支付协议>>"
+            android:textColor="@color/def_pointer_color"/>
+
+
+        <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+            android:id="@+id/tv_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:type="round"
+            app:borderRadius="50px"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/btn_ok_gray"
+            android:layout_below="@+id/textView22"
+            android:layout_marginTop="20px"/>
+
+    <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_click"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="快捷支付由第三方支付提供"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

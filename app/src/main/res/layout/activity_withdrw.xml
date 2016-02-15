@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.WithDrawActivity">
+
+
+    <!-- 引入头部局-->
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <!-- 银行-->
+    <RelativeLayout
+        android:id="@+id/relative_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="40px"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/tv_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="30px"
+            android:text="绑定卡号"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/tv_num_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_bank_card"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:padding="30px"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <!-- 开户行-->
+    <RelativeLayout
+        android:id="@+id/relative_select_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_bank"
+        android:layout_marginTop="20px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_bankname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="30px"
+            android:text="开户行"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+
+        <!--android:text="招商银行"-->
+        <EditText
+            android:id="@+id/tv_select_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="119dp"
+            android:layout_marginRight="119dp"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:hint="请输入开户行"
+            android:background="@null"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <!-- 提现金额-->
+    <RelativeLayout
+        android:id="@+id/relative_RMB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_select_bank"
+        android:layout_marginTop="20px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_can_withdraw_RMB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_num_can_withdraw_RMB"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="30px"
+            android:text="可提现金额"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+
+        <TextView
+            android:id="@+id/tv_num_can_withdraw_RMB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_withdraw_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_RMB"
+        android:background="@color/white">
+
+        <!-- 提现金额-->
+        <TextView
+            android:id="@+id/tv_withdraw_RMB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="30px"
+            android:text="提现金额"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+
+
+        <EditText
+            android:id="@+id/tv_num_withdraw_RMB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:hint="请输入提现金额"
+            android:inputType="number"
+            android:padding="30px"/>
+    </RelativeLayout>
+
+
+    <!-- 支付密码-->
+    <RelativeLayout
+        android:id="@+id/relative_pay_password"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_below="@id/relative_withdraw_money"
+        android:layout_marginTop="30px"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/tv_pay_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="30px"
+            android:text="支付密码"
+            android:textColor="@color/black"
+            android:textSize="30px"/>
+
+
+        <EditText
+            android:id="@+id/tv_num_pay_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:hint="请输入支付密码"
+            android:inputType="textPassword"
+            android:padding="30px"/>
+    </RelativeLayout>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_pay_password"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="33dp"
+        android:text="1:提现金额需大于等于6元"
+        android:textColor="@color/red"
+        app:minTextSize="10sp"
+        app:sizeToFit="true"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20px"
+        android:maxLines="2"
+        android:text="2:充值未投资金额(1000元以上收取0.5%手续费，不满1000元大于等于6元收取5元手续费)"
+        android:textColor="@color/red"
+        app:minTextSize="10sp"
+        app:sizeToFit="true"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+        android:id="@+id/tv_click_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="80px"
+        android:background="@mipmap/btn_ok_gray"
+        app:borderRadius="50px"
+        app:type="round"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"/>
+
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/tv_input_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_click_ok"
+        android:layout_alignStart="@+id/tv_click_ok"
+        android:layout_below="@+id/tv_click_ok"
+        android:text="到帐时间说明"
+        app:sizeToFit="true"
+        android:layout_marginTop="10px"
+        android:textColor="@color/def_pointer_color"/>
+
+    <!-- 忘记支付密码-->
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/tv_forget_pay_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_click_ok"
+        android:layout_alignRight="@+id/tv_click_ok"
+        android:layout_alignTop="@+id/tv_input_account"
+        android:text="忘记支付密码"
+        app:sizeToFit="true"
+        android:layout_marginTop="10px"
+        android:textColor="@color/def_pointer_color"/>
+
+
+</RelativeLayout>

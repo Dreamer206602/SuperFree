@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.IntegralDetailsActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <ImageView
+        android:id="@+id/id_image"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:layout_below="@id/topBar"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_default_adimage"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- 兑换-->
+        <TextView
+            android:id="@+id/tv_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:text="兑换:"
+            android:textSize="15sp"/>
+
+        <!--j所需要的积分数目 999 -->
+        <TextView
+            android:id="@+id/tv_num_product_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_exchange"
+            android:layout_toEndOf="@+id/tv_exchange"
+            android:layout_toRightOf="@+id/tv_exchange"
+            android:gravity="center"
+            android:text="999"
+            android:textColor="@color/def_text_color"
+            android:textSize="15sp"/>
+
+
+        <!-- 积分-->
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_exchange"
+            android:layout_marginLeft="5px"
+            android:layout_toEndOf="@+id/tv_num_product_integral"
+            android:layout_toRightOf="@+id/tv_num_product_integral"
+            android:text="积分"
+            android:textSize="12sp"/>
+
+        <!-- +-->
+        <TextView
+            android:id="@+id/tv_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_integral"
+            android:layout_toEndOf="@+id/tv_integral"
+            android:layout_toRightOf="@+id/tv_integral"
+            android:text="+"
+            android:textSize="15sp"/>
+
+        <!-- 400元-->
+        <TextView
+            android:id="@+id/tv_num_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_num_product_integral"
+            android:layout_toEndOf="@+id/tv_plus"
+            android:layout_toRightOf="@+id/tv_plus"
+            android:text="400元"
+            android:textSize="15sp"/>
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="元"-->
+        <!--android:textSize="40px"-->
+        <!--android:id="@+id/textView14"-->
+        <!--android:layout_alignBottom="@+id/tv_RMB"-->
+        <!--android:layout_toRightOf="@+id/tv_RMB"-->
+        <!--android:layout_toEndOf="@+id/tv_RMB"/>-->
+
+        <!-- 库存-->
+        <TextView
+            android:id="@+id/tv_inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:text="{库存: 28}"
+            android:padding="5px"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/view4"
+        android:layout_weight="1"
+        android:scrollbars="vertical"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+        android:id="@+id/tv_click_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20px"
+        android:background="@mipmap/exchange"
+        app:borderRadius="50px"
+        app:type="round"/>
+
+
+</LinearLayout>

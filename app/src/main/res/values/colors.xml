@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 首页的进度条的颜色属性-->
+    <color name="def_wheel_color">#c1e2f4</color>
+    <color name="def_reached_color">#48a7dc</color>
+    <color name="def_pointer_color">#0c9ce6</color>
+
+
+    <!-- TopBar的背景颜色-->
+    <color name="def_topbar_color">#0c9ce6</color>
+
+    <!-- 文字的颜色-->
+    <color name="def_text_color">#dc9b6f</color>
+
+    <!-- View的颜色-->
+    <color name="def_view_color">#e9aea7ae</color>
+
+    <!-- 产品页面的textView的背景颜色-->
+    <color name="def_product_textView_background_color">#fdf2f2f2</color>
+
+
+</resources>

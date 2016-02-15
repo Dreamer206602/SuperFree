@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.MoreActivity">
+    
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"
+        />
+    
+    
+    <TextView
+        android:id="@+id/tv_online_help"
+        android:layout_marginTop="60px"
+        android:background="@color/white"
+        android:text="在线帮助"
+        android:textColor="@color/black"
+        android:drawableRight="@mipmap/right"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:layout_marginTop="5px"
+        android:background="@color/white"
+        android:text="关于我们"
+        android:textColor="@color/black"
+        android:drawableRight="@mipmap/right"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_marginTop="5px"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/white"-->
+        <!-->-->
+        <!--<TextView-->
+            <!--android:text="客服电话"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:padding="30px"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_service_phone"-->
+            <!--android:text="400-8280-979"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="30px"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentEnd="true"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_feed_callback"-->
+        <!--android:layout_marginTop="40px"-->
+        <!--android:background="@color/white"-->
+        <!--android:text="意见反馈"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:drawableRight="@mipmap/right"-->
+        <!--android:padding="30px"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+
+    <include
+        android:id="@+id/tv_click_quit"
+        layout="@layout/item_click"/>
+
+
+
+</LinearLayout>

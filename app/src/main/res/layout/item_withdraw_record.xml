@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_bankname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工商银行(尾号1123)"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px"
+        />
+
+    <TextView
+        android:id="@+id/tv_addtime"
+        android:text="11月12日 14:13:32"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_bankname"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="30px"
+        android:layout_marginEnd="37dp"/>
+
+    <TextView
+        android:id="@+id/tv_withdraw_RMB"
+        android:text="100元"
+        android:textColor="@color/black"
+        android:layout_marginTop="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bankname"
+        android:layout_alignLeft="@+id/tv_bankname"
+        android:layout_alignStart="@+id/tv_bankname"/>
+
+    <TextView
+        android:id="@+id/tv_Fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手续费:"
+        android:textColor="@color/black"
+        android:layout_alignLeft="@+id/tv_addtime"
+        android:layout_alignStart="@+id/tv_addtime"
+        android:layout_alignTop="@+id/tv_withdraw_RMB"
+        android:layout_above="@+id/tv_withdraw_statue"/>
+
+    <TextView
+        android:id="@+id/tv_withdraw_statue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现状态"
+        android:textColor="@color/black"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/tv_withdraw_RMB"
+        android:layout_alignLeft="@+id/tv_withdraw_RMB"
+        android:layout_alignStart="@+id/tv_withdraw_RMB"/>
+
+    <TextView
+        android:id="@+id/tv_bank_status"
+        android:text="银行处理中"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_alignTop="@+id/tv_withdraw_statue"
+        android:layout_toRightOf="@+id/tv_withdraw_statue"
+        android:layout_toEndOf="@+id/tv_withdraw_statue"/>
+
+    <!-- 手续费-->
+    <TextView
+        android:id="@+id/tv_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxx元"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20px"
+        android:layout_above="@+id/tv_withdraw_statue"
+        android:layout_toRightOf="@+id/tv_Fee"
+        android:layout_toEndOf="@+id/tv_Fee"/>
+
+</RelativeLayout>

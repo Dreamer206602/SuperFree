@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/dialog_calculator"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10px"
+                android:background="@color/white"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <TextView
+        android:id="@+id/tv_Benefit_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="收益计划"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_Benefit_plan"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:background="@mipmap/cancel"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/def_view_color"
+        android:layout_below="@id/tv_Benefit_plan"/>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_centerHorizontal="true"
+        android:text="投资金额"
+        android:layout_marginTop="10px"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+
+
+    <EditText
+        android:id="@+id/et_input_money"
+        android:layout_width="400px"
+        android:layout_height="90px"
+        android:inputType="number"
+        android:layout_below="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20px"
+        android:background="@drawable/shape_round_edittext"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        app:minTextSize="12sp"
+        android:textSize="12sp"
+        android:layout_below="@id/et_input_money"
+        android:layout_marginTop="10px"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:text="土豪我算不过来了，请输入小于等于10000000.00的金额"
+        android:textColor="@color/def_text_color"
+        android:id="@+id/tv_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <!-- 预期收益-->
+    <TextView
+        android:id="@+id/tv_prospective_earnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_remind"
+        android:layout_marginTop="10px"
+        android:layout_toStartOf="@+id/tv_ok"
+        android:text="预期收益(元)"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_toLeftOf="@+id/tv_ok"/>
+
+    <!-- 4444-->
+    <TextView
+        android:id="@+id/tv_num_prospective_earnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/def_text_color"
+        android:maxLines="2"
+        android:textSize="15sp"
+        android:text="0"
+        android:layout_above="@+id/view2"
+        android:layout_alignLeft="@+id/et_input_money"
+        android:layout_alignStart="@+id/et_input_money"/>
+
+    <!-- 平均月息(元)-->
+    <TextView
+        android:id="@+id/tv_average_monthly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_prospective_earnings"
+        android:layout_toEndOf="@+id/textView10"
+        android:layout_toRightOf="@+id/textView10"
+        android:text="平均月息(元)"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="15sp"/>
+
+    <!-- 888-->
+    <TextView
+        android:id="@+id/tv_num_average_monthly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_average_monthly"
+        android:layout_alignStart="@+id/tv_average_monthly"
+        android:layout_below="@+id/tv_average_monthly"
+        android:layout_marginLeft="30px"
+        android:maxLines="2"
+        android:text="0"
+        android:textColor="@color/def_text_color"
+        android:textSize="15sp"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/def_view_color"
+        android:layout_below="@id/tv_num_average_monthly"
+        android:layout_marginTop="15px"/>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/view2"
+        android:text="确定"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px"
+        android:textColor="@color/def_pointer_color"
+        android:textSize="18sp"/>
+
+
+</RelativeLayout>

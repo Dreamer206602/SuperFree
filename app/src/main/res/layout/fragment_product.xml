@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.zchx.lb.superfree.ui.ui.fragment.ProductFragment">
+
+
+    <!-- 引入头布局-->
+    <include layout="@layout/item_topbar"
+        android:id="@+id/topBar"/>
+
+
+
+    <!-- middle RelativeLayout-->
+    <RelativeLayout
+        android:id="@+id/relative_product_type"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:background="@color/def_product_textView_background_color"
+        android:layout_height="80px">
+        <TextView
+            android:text="定期产品"
+            android:id="@+id/tv_current_product"
+            android:textSize="18sp"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="15px"
+            android:layout_width="match_parent"
+            android:layout_height="40px"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_marginTop="20px"
+            android:layout_below="@id/tv_current_product"
+            android:background="@color/def_pointer_color"
+            android:layout_width="200px"
+            android:layout_height="5px"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+
+    <ListView
+        android:layout_below="@id/relative_product_type"
+        android:id="@+id/id_ListView"
+        android:cacheColorHint="#00000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>

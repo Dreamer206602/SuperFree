@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@mipmap/person"
+        android:layout_marginTop="10px"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人"
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:textSize="30px"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:layout_marginTop="20px"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

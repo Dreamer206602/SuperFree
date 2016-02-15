@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+               style="@style/match_wrap"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+        <!-- 交易类型-->
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_Transaction_type"
+            android:text="交易类型:"
+            android:layout_margin="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sizeToFit="true"/>
+
+
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值"
+            app:sizeToFit="true"
+            android:layout_alignBottom="@+id/tv_Transaction_type"
+            android:layout_toRightOf="@+id/tv_Transaction_type"
+            android:layout_toEndOf="@+id/tv_Transaction_type"/>
+
+        <!-- 交易时间-->
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-12-11 14:35:34"
+            android:layout_marginRight="20px"
+            app:sizeToFit="true"
+            android:layout_alignBottom="@+id/tv_types"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 交易额-->
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_Transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易额:"
+            android:textColor="@color/red"
+            app:sizeToFit="true"
+            android:layout_below="@+id/tv_Transaction_type"
+            android:layout_alignLeft="@+id/tv_Transaction_type"
+            android:layout_alignStart="@+id/tv_Transaction_type"
+            android:layout_marginBottom="20px"/>
+
+        <!-- 交易金额的数目-->
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_num_Transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1500.00"
+            android:textColor="@color/red"
+            android:layout_below="@+id/tv_Transaction_type"
+            android:layout_toRightOf="@+id/tv_Transaction_amount"
+            android:layout_toEndOf="@+id/tv_Transaction_amount"
+            app:sizeToFit="true"/>
+
+    <!-- 交易余额-->
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:id="@+id/tv_num_Transaction_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1600元"
+        app:sizeToFit="true"
+        android:textColor="@color/red"
+        android:layout_below="@+id/tv_Transaction_type"
+        android:layout_alignRight="@+id/tv_time"
+        android:layout_alignEnd="@+id/tv_time"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余额:"
+        app:sizeToFit="true"
+        android:textColor="@color/red"
+        android:id="@+id/textView26"
+        android:layout_marginRight="10px"
+        android:layout_alignTop="@+id/tv_num_Transaction_balance"
+        android:layout_toLeftOf="@+id/tv_num_Transaction_balance"
+        android:layout_toStartOf="@+id/tv_num_Transaction_balance"/>
+
+
+</RelativeLayout>

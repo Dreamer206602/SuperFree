@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.ConfirmExchangeInfoActivity">
+
+
+    <!-- 引入头布局-->
+
+    <include layout="@layout/item_topbar"
+        android:id="@+id/topBar"/>
+
+
+    <!-- 商品名称-->
+    <RelativeLayout
+        android:id="@+id/relative_product_name"
+        android:layout_below="@id/topBar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20px"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_project"
+            android:text="商品名称:"
+            android:padding="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我最爱的苹果手机"
+            android:id="@+id/tv_goods_title"
+            android:padding="20px"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <!-- 兑换价格-->
+    <RelativeLayout
+        android:id="@+id/relative_exchange_price"
+        android:background="@color/white"
+        android:layout_below="@id/relative_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 兑换价格-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="兑换价格:"
+        android:padding="20px"
+        android:id="@+id/tv_conversion_price"
+            />
+
+        <!-- 产品的积分数目-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="999"
+        android:textColor="@color/def_text_color"
+        android:id="@+id/tv_num_product_integral"
+        android:layout_marginLeft="59dp"
+        android:layout_marginStart="59dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tv_conversion_price"
+        android:layout_toEndOf="@+id/tv_conversion_price"/>
+
+        <!-- 积分-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="积分"
+        android:id="@+id/tv_integral"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/tv_num_product_integral"
+        android:layout_toRightOf="@+id/tv_num_product_integral"
+        android:layout_toEndOf="@+id/tv_num_product_integral"/>
+
+        <!-- + -->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/tv_plus"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/tv_integral"
+        android:layout_toRightOf="@+id/tv_integral"
+        android:layout_toEndOf="@+id/tv_integral"/>
+
+        <!-- 产品的所需的人民币-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="400"
+        android:textColor="@color/def_text_color"
+        android:id="@+id/tv_num_product_price"
+        android:layout_centerVertical="true"
+        android:layout_alignBottom="@+id/tv_plus"
+        android:layout_toRightOf="@+id/tv_plus"
+        android:layout_toEndOf="@+id/tv_plus"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        android:layout_centerVertical="true"
+        android:id="@+id/textView19"
+        android:layout_alignBottom="@+id/tv_num_product_price"
+        android:layout_toRightOf="@+id/tv_num_product_price"
+        android:layout_toEndOf="@+id/tv_num_product_price"/>
+    </RelativeLayout>
+
+
+
+
+    <!-- 账户余额-->
+    <RelativeLayout
+        android:id="@+id/relative_product_type"
+        android:layout_below="@id/relative_product_name"
+        android:layout_marginTop="80px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- 账户余额-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户余额:"
+            android:padding="20px"
+            android:id="@+id/tv_account_balance"
+            />
+
+        <!-- 用户的金钱余额-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999元"
+            android:padding="20px"
+            android:id="@+id/tv_num_user_balance"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- 余额不足-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额不足"
+            android:padding="20px"
+            android:id="@+id/tv_balance_low"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/tv_click_recharge"
+            android:layout_toStartOf="@+id/tv_click_recharge"/>
+
+        <!-- 立即充值金钱-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立即充值"
+            android:padding="20px"
+            android:textColor="@color/def_pointer_color"
+            android:id="@+id/tv_click_recharge"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+    <!-- 可用的积分-->
+    <RelativeLayout
+        android:id="@+id/relative_integral"
+        android:layout_below="@id/relative_product_type"
+        android:layout_marginTop="10px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 可用积分-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可用积分:"
+        android:id="@+id/tv_available_integral"
+        android:padding="20px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+        <!-- 用户的可用的积分-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:id="@+id/tv_num_user_integral"
+        android:padding="20px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+        <!-- 积分不足-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="积分不足"
+        android:textColor="@color/red"
+        android:id="@+id/tv_integral_low"
+        android:padding="20px"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_click_get_integral"
+        android:layout_toStartOf="@+id/tv_click_get_integral"/>
+
+        <!-- 按钮，，，如何获得积分-->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="如何获得"
+        android:textColor="@color/def_pointer_color"
+        android:id="@+id/tv_click_get_integral"
+        android:padding="20px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+
+    <!-- 用户名-->
+    <RelativeLayout
+        android:id="@+id/relative_user_name"
+        android:layout_below="@id/relative_product_type"
+        android:background="@color/white"
+        android:layout_marginTop="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- 收货人姓名-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收货人姓名:"
+            android:padding="20px"
+            android:id="@+id/tv_person_name"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_user_name"
+            android:textSize="30px"
+            android:hint="请输入收货人姓名"
+            android:padding="20px"
+            android:background="@null"
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_person_name"
+            android:layout_toEndOf="@+id/tv_person_name"/>
+
+    </RelativeLayout>
+
+
+    <!-- 收货人手机号-->
+    <RelativeLayout
+        android:id="@+id/relative_user_phone"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="5px"
+        android:layout_below="@id/relative_user_name"
+        android:layout_height="wrap_content">
+
+
+        <!--收货人手机号 -->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货人手机号:"
+        android:id="@+id/tv_person_phone"
+        android:padding="20px"
+        android:layout_alignBottom="@+id/et_user_phone"/>
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_user_phone"
+        android:hint="请输入收货人的手机号"
+        android:background="@null"
+        android:textSize="30px"
+        android:padding="20px"
+        android:inputType="phone"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_person_phone"
+        android:layout_toEndOf="@+id/tv_person_phone"/>
+
+    </RelativeLayout>
+
+    <!-- 收货人地址-->
+    <RelativeLayout
+        android:id="@+id/relative_user_address"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/relative_user_phone"
+        android:layout_marginTop="5px"
+        android:layout_height="wrap_content">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货地址:"
+        android:padding="20px"
+        android:id="@+id/tv_person_address"
+            />
+
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="省       市      区"
+        android:id="@+id/et_province_city_area"
+        android:padding="20px"
+        android:background="@null"
+        android:layout_toRightOf="@+id/tv_person_address"
+        android:layout_marginLeft="77dp"
+        android:layout_marginStart="77dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_detail_user_address"
+        android:layout_below="@id/relative_user_address"
+        android:layout_marginTop="5px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_user_detail_address"
+        android:hint="请输入详细街道地址"
+        android:textSize="30px"
+        android:background="@null"
+            android:padding="20px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"/>
+
+
+    </RelativeLayout>
+
+
+    <!-- 支付密码-->
+    <RelativeLayout
+        android:id="@+id/relative_confirm_new_password"
+        android:layout_below="@id/relative_detail_user_address"
+        android:layout_marginTop="40px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入支付密码:"
+            android:padding="20px"
+            android:id="@+id/tv_password"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_user_pay_password"
+            android:hint="请输入支付密码"
+            android:textSize="25px"
+            android:background="@null"
+            android:padding="20px"
+            android:inputType="textPassword"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_password"
+            android:layout_toEndOf="@+id/tv_password"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+    </RelativeLayout>
+
+
+    <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+        android:id="@+id/tv_click_pay"
+        android:layout_width="500px"
+        android:layout_height="80px"
+        app:borderRadius="50px"
+        app:type="round"
+        android:background="@mipmap/pay"
+        android:layout_below="@+id/relative_confirm_new_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"/>
+
+
+</RelativeLayout>

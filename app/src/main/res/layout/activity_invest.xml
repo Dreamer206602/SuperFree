@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.InvestActivity">
+
+    <!-- 引入头布局-->
+    <include layout="@layout/item_topbar"
+        android:id="@+id/topBar"/>
+    <RelativeLayout
+        android:id="@+id/relative_product_name"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30px"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <!-- 项目剩余可投金额-->
+        <TextView
+            android:textSize="40px"
+            android:gravity="center"
+            android:padding="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="项目剩余可投金额:"
+            android:id="@+id/tv_remaining_money"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_num_remaining_money"
+            android:text="0元"
+            android:textSize="40px"
+            android:gravity="center"
+            android:layout_marginRight="20px"
+            android:padding="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_product_type"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:layout_below="@+id/relative_product_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <!-- 账户余额-->
+        <TextView
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户余额:"
+            android:textSize="40px"
+            android:id="@+id/tv_account_balance"
+            android:layout_alignParentLeft="true"
+            />
+
+        <!-- 金额 1111-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:layout_marginLeft="10px"
+            android:textColor="@color/def_text_color"
+            android:id="@+id/tv_num_user_balance"
+            android:layout_alignBottom="@+id/tv_account_balance"
+            android:layout_toRightOf="@+id/tv_account_balance"
+            android:layout_toEndOf="@+id/tv_account_balance"/>
+
+        <!-- 元-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="40px"
+            android:layout_marginLeft="5px"
+            android:id="@+id/tv_num_product_price"
+            android:layout_toRightOf="@+id/tv_num_user_balance"
+            android:layout_toEndOf="@+id/tv_num_user_balance"
+            android:layout_alignTop="@+id/tv_num_user_balance"
+            android:layout_alignBottom="@+id/tv_num_user_balance"/>
+
+        <!-- 按钮去充值-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去充值"
+            android:textSize="40px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="20px"
+            android:textColor="@color/def_pointer_color"
+            android:id="@+id/tv_recharge"
+            android:layout_alignBottom="@+id/tv_num_product_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 投资金额-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资金额:"
+            android:textSize="40px"
+            android:layout_marginTop="80px"
+            android:id="@+id/tv_investment_amount"
+            android:layout_below="@+id/tv_account_balance"
+            android:layout_alignLeft="@+id/tv_account_balance"
+            android:layout_alignStart="@+id/tv_account_balance"/>
+
+        <!-- 金额输入框-->
+        <EditText
+            android:layout_width="400px"
+            android:layout_height="75px"
+            android:inputType="number"
+            android:id="@+id/et_num_investment_amount"
+            android:background="@drawable/shape_round_edittext"
+            android:layout_alignBottom="@+id/tv_investment_amount"
+            android:layout_alignLeft="@+id/tv_num_user_balance"
+            android:layout_alignStart="@+id/tv_num_user_balance"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textSize="40px"
+            android:layout_marginLeft="5px"
+            android:id="@+id/tv_RMB2"
+            android:layout_toRightOf="@+id/et_num_investment_amount"
+            android:layout_toEndOf="@+id/et_num_investment_amount"
+            android:layout_alignTop="@+id/tv_investment_amount"/>
+
+
+        <!-- 1500元/份-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:textSize="30px"
+            android:layout_marginLeft="20px"
+            android:textColor="@color/def_text_color"
+            android:id="@+id/tv_num_share"
+            android:layout_above="@+id/et_num_investment_amount"
+            android:layout_alignLeft="@+id/et_num_investment_amount"
+            android:layout_alignStart="@+id/et_num_investment_amount"/>
+
+        <!-- 元/份-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元/份"
+            android:layout_marginLeft="5px"
+            android:textSize="30px"
+            android:id="@+id/tv_residual_share"
+            android:layout_above="@+id/et_num_investment_amount"
+            android:layout_toRightOf="@+id/tv_num_share"
+            android:layout_toEndOf="@+id/tv_num_share"/>
+
+        <!-- 整数倍购买-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="整数倍购买"
+            android:textSize="30px"
+            android:layout_marginLeft="20px"
+            android:id="@+id/textView"
+            android:layout_above="@+id/et_num_investment_amount"
+            android:layout_toRightOf="@+id/tv_residual_share"
+            android:layout_toEndOf="@+id/tv_residual_share"/>
+
+        <!-- 支付密码-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="支付密码:"
+            android:textSize="40px"
+            android:id="@+id/tv_pay_password"
+            android:layout_below="@+id/tv_investment_amount"
+            android:layout_alignLeft="@+id/tv_investment_amount"
+            android:layout_alignStart="@+id/tv_investment_amount"
+            android:layout_marginTop="100px"/>
+
+        <!-- 密码输入框-->
+        <EditText
+            android:layout_width="400px"
+            android:layout_height="75px"
+            android:inputType="textPassword"
+            android:id="@+id/et_pay_tv_pay_password"
+            android:background="@drawable/shape_round_edittext"
+            android:layout_alignBottom="@+id/tv_pay_password"
+            android:layout_alignLeft="@+id/et_num_investment_amount"
+            android:layout_alignStart="@+id/et_num_investment_amount"/>
+
+        <!-- 到期净收益-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到期净收益:"
+            android:textSize="30px"
+            android:id="@+id/tv_due_to_net_income"
+            android:layout_above="@+id/et_pay_tv_pay_password"
+            android:layout_alignLeft="@+id/et_pay_tv_pay_password"
+            android:layout_alignStart="@+id/et_pay_tv_pay_password"/>
+
+        <!-- 净收益多少元-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px"
+            android:textColor="@color/def_text_color"
+            android:id="@+id/tv_num_due_to_net_income"
+            android:maxLines="2"
+            android:text="0"
+            android:singleLine="true"
+            android:layout_marginLeft="5px"
+            android:layout_above="@+id/et_pay_tv_pay_password"
+            android:layout_toRightOf="@+id/tv_due_to_net_income"
+            android:layout_toEndOf="@+id/tv_due_to_net_income"/>
+
+        <!-- 元-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="元"
+            android:textSize="30px"
+            android:id="@+id/tv_RMB3"
+            android:layout_marginLeft="5px"
+            android:layout_above="@+id/et_pay_tv_pay_password"
+            android:layout_toRightOf="@+id/tv_num_due_to_net_income"
+            android:layout_toEndOf="@+id/tv_num_due_to_net_income"/>
+    </RelativeLayout>
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:checked="true"
+        android:layout_width="50px"
+        android:layout_height="40px"
+        android:layout_below="@+id/relative_product_type"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="49dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="43dp"/>
+
+    <!--&lt;!&ndash; 同意按如下&ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="同意按如下"-->
+        <!--android:layout_marginLeft="10px"-->
+        <!--android:textSize="35px"-->
+        <!--android:id="@+id/textView5"-->
+        <!--android:layout_alignBottom="@+id/cb_select"-->
+        <!--android:layout_toRightOf="@+id/cb_select"-->
+        <!--android:layout_toEndOf="@+id/cb_select"/>-->
+
+    <!--&lt;!&ndash; <<投资合同范本>>可以点击的按钮&ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+        <!--android:text="《投资合同范本》"-->
+        <!--android:textSize="35px"-->
+        <!--android:textColor="@color/def_pointer_color"-->
+        <!--android:id="@+id/tv_Investment_contracts"-->
+        <!--android:layout_alignBottom="@+id/textView5"-->
+        <!--android:layout_toRightOf="@+id/textView5"-->
+        <!--android:layout_toEndOf="@+id/textView5"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="35px"-->
+        <!--android:layout_marginLeft="2px"-->
+        <!--android:text="的格式和条"-->
+        <!--android:id="@+id/textView7"-->
+        <!--android:layout_alignBottom="@+id/tv_Investment_contracts"-->
+        <!--android:layout_toRightOf="@+id/tv_Investment_contracts"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="款生成借款协议和"-->
+        <!--android:textSize="35px"-->
+        <!--android:layout_marginTop="15px"-->
+        <!--android:id="@+id/textView8"-->
+        <!--android:layout_below="@+id/textView5"-->
+        <!--android:layout_alignLeft="@+id/textView5"-->
+        <!--android:layout_alignStart="@+id/textView5"/>-->
+
+    <!-- 《移动支付协议》可以点击的按钮-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+        <!--android:text="《移动支付协议》"-->
+        <!--android:textColor="@color/def_pointer_color"-->
+        <!--android:textSize="35px"-->
+        <!--android:id="@+id/tv_Mobile_payment_protocol"/>-->
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        app:sizeToFit="true"
+        app:minTextSize="15sp"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我同意"
+        android:layout_marginLeft="5px"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/cb_select"
+        android:layout_toRightOf="@+id/cb_select"
+        android:layout_toEndOf="@+id/cb_select"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        app:sizeToFit="true"
+        app:minTextSize="15sp"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="《移动支付协议》"
+        android:id="@+id/tv_payment_protocol"
+        android:textColor="@color/def_pointer_color"
+        android:layout_alignBottom="@+id/cb_select"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"/>
+
+
+    <!-- 投资按钮-->
+    <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+        android:id="@+id/tv_click"
+        app:borderRadius="40px"
+        app:type="round"
+        android:background="@mipmap/touzi"
+        android:layout_width="600px"
+        android:layout_height="90px"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/cb_select"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

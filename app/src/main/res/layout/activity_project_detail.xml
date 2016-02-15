@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.ProjectDetailActivity">
+
+    <!-- 引入头布局-->
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_annual_Earnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="年化收益:"
+            android:padding="10px"
+            android:textColor="@color/black"/>
+
+        <!-- 年化收益 14.00%-->
+        <TextView
+            android:id="@+id/tv_num_annual_Earnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_annual_Earnings"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="14.00"
+            android:textColor="@color/def_topbar_color"
+            android:textSize="15sp"/>
+
+        <!-- %-->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_num_annual_Earnings"
+            android:layout_toEndOf="@+id/tv_num_annual_Earnings"
+            android:layout_toRightOf="@+id/tv_num_annual_Earnings"
+            android:text="%"
+            android:textColor="@color/def_topbar_color"/>
+    </RelativeLayout>
+
+
+    <!--项目的期限-->
+    <RelativeLayout
+        android:id="@+id/relative_product_deadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_product_name"
+        android:background="@color/white">
+
+        <!--期限-->
+        <TextView
+            android:id="@+id/deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="10px"
+            android:text="期限:"
+            />
+
+        <!-- 90天-->
+        <TextView
+            android:id="@+id/tv_num_deadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/deadline"
+            android:layout_marginLeft="10px"
+            android:layout_toEndOf="@+id/deadline"
+            android:layout_toRightOf="@+id/deadline"
+            android:text="90天"
+            android:textColor="@color/black"/>
+
+
+        <!-- 规模-->
+        <TextView
+            android:id="@+id/tv_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_num_deadline"
+            android:layout_marginLeft="20px"
+            android:layout_toEndOf="@+id/tv_num_deadline"
+            android:layout_toRightOf="@+id/tv_num_deadline"
+            android:text="规模:"/>
+
+        <!-- 1000万-->
+        <TextView
+
+            android:id="@+id/tv_num_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_scale"
+            android:layout_marginLeft="5px"
+            android:layout_toEndOf="@+id/tv_scale"
+            android:layout_toRightOf="@+id/tv_scale"
+            android:text="1000万"
+            android:layout_marginRight="5px"
+            android:textColor="@color/black"/>
+
+        <!-- 1500元/份-->
+        <TextView
+            android:id="@+id/tv_num_portion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_num_scale"
+            android:layout_marginLeft="20px"
+            android:layout_toEndOf="@+id/tv_num_scale"
+            android:layout_toRightOf="@+id/tv_num_scale"
+            android:text="1500元/份"
+            android:textColor="@color/black"/>
+
+        <!-- 水平进度条-->
+        <com.zchx.lb.superfree.ui.ui.widget.progressbar.HorizontalProgressBarWithNumber
+            android:id="@+id/horizonProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:layout_below="@+id/deadline"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15px"
+            android:progress="20"/>
+    </RelativeLayout>
+
+    <!-- 融资-->
+    <RelativeLayout
+        android:id="@+id/relative_product_raised"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_product_deadline"
+        android:background="@color/white">
+
+        <!-- 已融资-->
+        <TextView
+            android:id="@+id/tv_raised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15px"
+            android:text="已融资"/>
+
+        <!-- 35.00%-->
+        <TextView
+            android:id="@+id/tv_num_raised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_raised"
+            android:layout_marginLeft="20px"
+            android:layout_toEndOf="@+id/tv_raised"
+            android:layout_toRightOf="@+id/tv_raised"
+            android:text="35.00%"
+            android:textColor="@color/def_topbar_color"/>
+
+        <!-- 1000份-->
+        <TextView
+            android:id="@+id/tv_num_residual_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_num_raised"
+            android:text="1000份"
+            android:layout_marginRight="20px"
+            android:textColor="@color/def_topbar_color"/>
+
+        <!-- 剩余份数-->
+        <TextView
+            android:id="@+id/tv_residual_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_num_residual_share"
+            android:layout_alignTop="@+id/tv_num_residual_share"
+            android:layout_marginRight="10px"
+            android:layout_toLeftOf="@+id/tv_num_residual_share"
+            android:layout_toStartOf="@+id/tv_num_residual_share"
+            android:text="剩余份数:"/>
+
+    </RelativeLayout>
+
+
+    <!-- 中间的布局-->
+    <RelativeLayout
+        android:id="@+id/relative_product_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_product_raised"
+        android:layout_marginTop="50px"
+        android:background="@color/white">
+
+        <!-- 项目类型-->
+        <TextView
+            android:id="@+id/tv_project_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:text="项目类型:"
+            android:textSize="40px"
+            />
+
+        <!-- 活期项目-->
+        <TextView
+            android:id="@+id/tv_related_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="20px"
+            android:text="活期项目"
+            android:textSize="40px"/>
+    </RelativeLayout>
+
+
+    <!-- 起息时间-->
+    <RelativeLayout
+        android:id="@+id/relative_interest_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_product_type"
+        android:background="@color/white">
+        <!-- 起息时间-->
+        <TextView
+            android:id="@+id/tv_interest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:text="起息时间:"
+            android:textSize="40px"/>
+
+        <!-- T(成交日)+1-->
+        <TextView
+            android:id="@+id/tv_num_interest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="20px"
+            android:text="T(成交日)+1"
+            android:textSize="40px"/>
+
+    </RelativeLayout>
+
+    <!-- 还款方式-->
+    <RelativeLayout
+        android:id="@+id/relative_repayment_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_interest_time"
+        android:background="@color/white">
+
+        <!-- 还款方式：-->
+        <TextView
+            android:id="@+id/tv_repayment_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:text="还款方式:"
+            android:textSize="40px"/>
+
+        <!-- 按月付息，到月还本-->
+        <TextView
+            android:id="@+id/tv_num_repayment_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="20px"
+            android:text="按月付息 到月还本"
+            android:textSize="40px"/>
+
+    </RelativeLayout>
+
+
+    <!-- 还款日期-->
+    <RelativeLayout
+        android:id="@+id/relative_Repayment_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relative_repayment_mode"
+        android:background="@color/white">
+        <!-- 还款日期-->
+        <TextView
+            android:id="@+id/tv_Repayment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20px"
+            android:text="还款日期:"
+            android:textSize="40px"
+            />
+
+        <!-- 2016-11-11-->
+        <TextView
+            android:id="@+id/tv_num_Repayment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="20px"
+            android:text="2016-11-11"
+            android:textSize="40px"/>
+    </RelativeLayout>
+
+    <!-- 查看详情-->
+    <RelativeLayout
+        android:id="@+id/relative_checkDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_Repayment_date"
+        android:layout_marginTop="40px"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_Check_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:drawableRight="@mipmap/right"
+            android:gravity="center"
+            android:onClick="CheckDetails"
+            android:padding="20px"
+            android:paddingRight="40px"
+            android:text="查看详情"
+            android:textSize="40px"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentBottom="true">
+
+        <!-- 计算器-->
+        <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+            android:id="@+id/tv_calculator"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="15px"
+            android:background="@mipmap/jisuanqi"
+            android:onClick="calculatorClick"
+            app:borderRadius="40px"
+            app:type="round"/>
+
+        <!-- 投资按钮-->
+        <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+            android:id="@+id/tv_click"
+            android:layout_width="550px"
+            android:layout_height="90px"
+            android:layout_alignTop="@id/tv_calculator"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/tv_calculator"
+            android:background="@mipmap/touzi"
+            android:onClick="InvestClick"
+            app:borderRadius="40px"
+            app:type="round"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

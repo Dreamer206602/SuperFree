@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.zchx.lb.superfree.ui.ui.fragment.MineFragment">
+
+    <ListView
+        android:id="@+id/id_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <!--
+android:numColumns="auto_fit" ，GridView的列数设置为自动
+android:columnWidth="90dp"，每列的宽度，也就是Item的宽度
+android:stretchMode="columnWidth"，缩放与列宽大小同步
+android:verticalSpacing="10dp"，两行之间的边距，如：行一(NO.0~NO.2)与行二(NO.3~NO.5)间距为10dp
+android:horizontalSpacing="10dp"，两列之间的边距
+ -->
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_marginTop="20px"
+        android:layout_below="@id/id_ListView"
+        android:numColumns="3"
+        android:columnWidth="100dp"
+
+        android:verticalSpacing="10px"
+        android:horizontalSpacing="10px"
+
+        android:soundEffectsEnabled="true"
+        android:smoothScrollbar="true"
+        android:listSelector="@android:color/transparent"
+
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchMode="columnWidth"/>
+
+</RelativeLayout>

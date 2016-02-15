@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.CheckDetailsActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <!--   android:scrollbars="vertical"  设置WebView不可以左右滑动-->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

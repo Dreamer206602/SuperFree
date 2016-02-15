@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    >
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015.11.13 11:23"
+        android:id="@+id/tv_add_time"
+        android:layout_margin="15px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="签到"
+        android:id="@+id/tv_mark"
+        android:layout_marginLeft="60px"
+        android:layout_alignTop="@+id/tv_add_time"
+        android:layout_toRightOf="@+id/tv_add_time"
+        android:layout_toEndOf="@+id/tv_add_time"
+        />
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        android:layout_margin="15px"
+        android:id="@+id/tv_user_integration"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

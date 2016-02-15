@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.MyPointsActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/def_pointer_color">
+
+        <com.zchx.lb.superfree.ui.ui.widget.circleImage.RoundImageView
+            android:id="@+id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:background="@mipmap/user"
+            app:type="circle"/>
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/img_user"
+            android:layout_alignStart="@+id/img_user"
+            android:layout_below="@+id/img_user"
+            android:layout_marginTop="20px"
+            android:text="可用积分"
+            android:textColor="@color/white"/>
+
+        <com.zchx.lb.superfree.ui.ui.widget.riseNumberTextView.RiseNumberTextView
+            android:id="@+id/tv_my_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView28"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="35sp"/>
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_Integral_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_my_point"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20px"
+            android:drawablePadding="10px"
+            android:drawableRight="@mipmap/explain"
+            android:text="查看积分规则"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/id_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/def_pointer_color"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/def_pointer_color"
+        app:tabTextColor="#000000"/>
+    <!--app:tabIndicatorColor="#1fb6c4"-->
+    <!--app:tabSelectedTextColor="#1fb6c4"-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 获取积分-->
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_access_record"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10px"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="获取积分"
+            android:padding="15px"
+            android:textColor="@color/def_pointer_color"
+            android:textSize="20sp"
+            app:minTextSize="20sp"
+            />
+
+        <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+            android:id="@+id/tv_use_record"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:text="使用积分"
+            android:textColor="@color/def_pointer_color"
+            android:textSize="20sp"
+            android:padding="15px"
+            app:minTextSize="20sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

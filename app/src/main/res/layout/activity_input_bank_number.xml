@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/match_match"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.InputBankNumberActivity">
+
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/item_topbar"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:layout_marginTop="20px"
+        android:text="为了保证您的资金安全，银行卡持卡人需与实名认证姓名一致"
+        style="@style/match_wrap"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:singleLine="true"
+        app:minTextSize="12sp"
+        android:padding="5px"
+        android:layout_marginLeft="2px"
+        android:layout_marginRight="2px"
+        app:sizeToFit="true"
+        />
+
+
+    <!-- 姓名-->
+    <RelativeLayout
+        android:id="@+id/relative_name"
+        android:layout_marginTop="40px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        style="@style/match_wrap"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:text="姓名"
+            android:gravity="center_horizontal"
+            android:layout_margin="10px"
+            android:padding="20px"
+            style="@style/wrap_wrap"
+            />
+
+        <EditText
+            android:id="@+id/et_user_name"
+            style="@style/wrap_wrap"
+            android:hint="请输入姓名"
+            android:padding="20px"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_alignBottom="@+id/tv_name"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_toEndOf="@+id/tv_name"
+            android:layout_marginLeft="49dp"
+            android:layout_marginStart="49dp"/>
+
+        <View
+            android:layout_below="@id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="5px"
+            android:background="@drawable/shape_horizontal_line"
+            android:id="@+id/view"/>
+    </RelativeLayout>
+
+    <!-- 身份证号-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        style="@style/match_wrap"
+        >
+        <TextView
+            android:id="@+id/tv_ID"
+            android:text="身份证号"
+            android:gravity="center_horizontal"
+            android:layout_margin="10px"
+            android:padding="20px"
+            style="@style/wrap_wrap"
+            />
+
+        <EditText
+            android:id="@+id/et_ID"
+            style="@style/wrap_wrap"
+            android:padding="20px"
+            android:background="@null"
+            android:layout_alignTop="@+id/tv_ID"
+            android:layout_toRightOf="@+id/tv_ID"
+            android:layout_toEndOf="@+id/tv_ID"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:hint="请输入身份证号"
+            android:singleLine="true"
+            />
+    </RelativeLayout>
+
+
+
+    <!-- 银行-->
+    <RelativeLayout
+        android:layout_marginTop="40px"
+        style="@style/match_wrap"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_bank"
+            android:text="银行"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@mipmap/right"
+            android:drawablePadding="10px"
+            android:padding="20px"
+            android:layout_margin="10px"
+            style="@style/match_wrap"
+            />
+
+        <!-- 选择银行-->
+        <EditText
+            android:id="@+id/tv_select_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请选择银行"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/tv_manage_bank"
+            android:layout_alignStart="@+id/tv_manage_bank"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@drawable/shape_horizontal_line"
+            android:layout_alignBottom="@+id/tv_bank"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <!-- 银行卡号-->
+    <RelativeLayout
+        style="@style/match_wrap"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_bank_card"
+            android:text="银行卡号"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@mipmap/right"
+            android:drawablePadding="10px"
+            android:padding="20px"
+            android:layout_margin="10px"
+            style="@style/match_wrap"
+            />
+
+        <!-- 输入银行卡号-->
+        <EditText
+            android:id="@+id/et_input_bank_number"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请填写您的银行卡号"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/tv_manage_bank"
+            android:layout_alignStart="@+id/tv_manage_bank"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@drawable/shape_horizontal_line"
+            android:layout_alignBottom="@+id/tv_bank_card"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+
+    <!-- 手机号-->
+    <RelativeLayout
+
+        style="@style/match_wrap"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_phoneNumber"
+            android:text="手机号"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@mipmap/explain"
+            android:drawablePadding="10px"
+            android:padding="20px"
+            android:layout_margin="10px"
+            style="@style/match_wrap"
+            />
+
+        <!-- 选择银行-->
+        <EditText
+            android:id="@+id/et_phoneNumber"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请填写您的银行卡预留手机号码"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/tv_manage_bank"
+            android:layout_alignStart="@+id/tv_manage_bank"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+           android:textSize="30px"
+            />
+
+    </RelativeLayout>
+
+
+    <!-- 支付密码-->
+    <RelativeLayout
+        android:layout_marginTop="40px"
+        style="@style/match_wrap"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_pay_password"
+            android:text="支付密码"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@mipmap/explain"
+            android:drawablePadding="10px"
+            android:padding="20px"
+            android:layout_margin="10px"
+            style="@style/match_wrap"
+            />
+
+        <!-- 支付密码-->
+        <EditText
+            android:id="@+id/et_user_pay_password"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请设置您的支付密码"
+            android:layout_centerVertical="true"
+            android:inputType="textPassword"
+            android:layout_alignLeft="@+id/tv_manage_bank"
+            android:layout_alignStart="@+id/tv_manage_bank"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            android:textSize="30px"
+            />
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/tvOK"
+        layout="@layout/item_click"/>
+
+    <com.zchx.lb.superfree.ui.ui.widget.autoFitTextView.AutofitTextView
+        android:visibility="gone"
+        android:id="@+id/tv_listAndBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="支持的银行及限额列表"
+        android:textColor="@color/def_pointer_color"
+        android:gravity="center_horizontal"
+        android:drawableLeft="@mipmap/explain"
+        android:drawablePadding="5px"
+        android:layout_marginTop="20px"
+        android:layout_gravity="center_horizontal"
+        app:sizeToFit="true"
+        />
+
+
+</LinearLayout>

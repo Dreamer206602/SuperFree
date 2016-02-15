@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zchx.lb.superfree.ui.ui.activity.OnLineHelpActivity">
+    <include
+        layout="@layout/item_topbar"
+        android:id="@+id/topBar"
+        />
+
+    <!-- 注册与登录-->
+    <RelativeLayout
+        android:id="@+id/relative_registerAndLogin"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="注册与登录"
+            android:textColor="@color/black"
+            android:padding="30px"
+            android:id="@+id/tv_register_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/tv_register_login"
+            android:background="@mipmap/zcydl"
+            android:id="@+id/img_register_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <!-- 认证与安全-->
+    <RelativeLayout
+        android:id="@+id/relative_CertificationAndSafety"
+        android:layout_below="@id/relative_registerAndLogin"
+        android:layout_marginTop="5px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="认证与安全"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:id="@+id/tv_certification_safety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/tv_certification_safety"
+            android:background="@mipmap/rzyaq"
+            android:id="@+id/img_certification_safety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <!-- 充值与提现-->
+    <RelativeLayout
+        android:id="@+id/relative_RechargeAndWithDraw"
+        android:layout_below="@id/relative_CertificationAndSafety"
+        android:layout_marginTop="5px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="充值与提现"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:id="@+id/tv_recharge_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/tv_recharge_withdraw"
+            android:background="@mipmap/czytx"
+            android:id="@+id/img_recharge_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <!-- 投资与转让-->
+    <RelativeLayout
+        android:id="@+id/relative_InvestmentAndTransfer"
+        android:layout_below="@id/relative_RechargeAndWithDraw"
+        android:layout_marginTop="5px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="投资与转让"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:id="@+id/tv_investment_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/tv_investment_transfer"
+            android:background="@mipmap/tzyzr"
+            android:id="@+id/img_investment_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <!-- 积分规则-->
+    <RelativeLayout
+        android:id="@+id/relative_IntegralRules"
+        android:layout_below="@id/relative_InvestmentAndTransfer"
+        android:layout_marginTop="5px"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="积分规则"
+            android:padding="30px"
+            android:textColor="@color/black"
+            android:id="@+id/tv_integralRules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_below="@id/tv_integralRules"
+            android:background="@mipmap/jfgz"
+            android:id="@+id/img_integralRules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
